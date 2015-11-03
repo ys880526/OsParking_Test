@@ -118,7 +118,6 @@ public class GateBarGUI extends javax.swing.JFrame implements DeviceGUI {
         this.gateBarID = gateBarID;
         gateID_TextField.setText(Integer.toString(gateBarID));
         
-        setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
         setResizable(false);
 
         /**

@@ -76,6 +76,13 @@ import static com.osparking.global.names.OSP_enums.DriverCol.UnitNo;
 import com.osparking.global.names.PComboBox;
 import com.osparking.global.names.OSP_enums.SearchPeriod;
 import static com.osparking.statistics.CarArrivals.getBarOperationLabel;
+import java.awt.Dimension;
+import javax.swing.BorderFactory;
+import javax.swing.JComboBox;
+import javax.swing.JList;
+import javax.swing.JPopupMenu;
+import javax.swing.JScrollPane;
+import javax.swing.plaf.basic.ComboPopup;
 
 /**
  *
@@ -219,11 +226,6 @@ public class CarArrivals extends javax.swing.JFrame {
         setTitle("Arrival Records");
         setFocusCycleRoot(false);
         setMinimumSize(new java.awt.Dimension(1150, 850));
-        addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowClosing(java.awt.event.WindowEvent evt) {
-                formWindowClosing(evt);
-            }
-        });
 
         wholePanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(3, 3, 3, 3));
         wholePanel.setLayout(new javax.swing.BoxLayout(wholePanel, javax.swing.BoxLayout.PAGE_AXIS));
@@ -1186,7 +1188,10 @@ public class CarArrivals extends javax.swing.JFrame {
     private void searchL2ComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchL2ComboBoxActionPerformed
         affiliationRadioButton.setSelected(true);
     }//GEN-LAST:event_searchL2ComboBoxActionPerformed
-
+    private int bgTop = 4;
+    private int bgLeft = 4;
+    private int bgRight = 9;
+    private int bgBottom = 10;
     private void searchL2ComboBoxPopupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_searchL2ComboBoxPopupMenuWillBecomeVisible
         Object selItem = searchL2ComboBox.getSelectedItem();
 
@@ -1196,6 +1201,7 @@ public class CarArrivals extends javax.swing.JFrame {
         searchL2ComboBox.addItem(getPrompter(AffiliationL2, searchL1ComboBox));
         loadComboBoxItems(searchL2ComboBox, DriverCol.AffiliationL2, L1No);
         searchL2ComboBox.setSelectedItem(selItem);
+        
     }//GEN-LAST:event_searchL2ComboBoxPopupMenuWillBecomeVisible
 
     private void searchBuildingComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBuildingComboBoxActionPerformed
@@ -1258,11 +1264,6 @@ public class CarArrivals extends javax.swing.JFrame {
             searchL2ComboBox.setEnabled(true);
         }
     }//GEN-LAST:event_affiliationRadioButtonActionPerformed
-
-    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        // TODO add your handling code here:
-        Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
-    }//GEN-LAST:event_formWindowClosing
 
     // <editor-fold defaultstate="collapsed" desc="-- Variables defined via GUI creation">
     // Variables declaration - do not modify//GEN-BEGIN:variables

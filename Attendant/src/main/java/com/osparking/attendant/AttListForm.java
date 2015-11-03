@@ -143,7 +143,6 @@ public class AttListForm extends javax.swing.JFrame {
         JComponent pane = (JComponent) this.getContentPane();
         pane.getInputMap().put(null, MUTEX_DEBUG_SEQ_VALUE);
         
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
         addWindowListener( new WindowAdapter() {
             public void windowOpened( WindowEvent e ){
                 searchText.requestFocus();
