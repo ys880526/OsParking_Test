@@ -1,0 +1,51 @@
+﻿#
+### Java ###
+*.class
+#
+# Package Files #
+*.jar
+*.war
+*.ear
+*.log
+#
+!/lib/rs2xml.jar
+#
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+#
+# individual files
+#
+nbactions.xml
+#
+#
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+#
+# irrelevant folders
+/checkpoints
+/Docu
+#
+# log folders
+/Attendant/log
+/OSParking/log
+/Simulators/Camera/log
+/Simulators/E_Board/log
+/Simulators/GateBar/log
+/Statistics/log
+/Vehicle/log
+#
+# lib folder
+/Statistics/lib
+#
+# target folder
+/Attendant/target
+/Global/target
+/JCalendar/target
+/OSParking/target
+/Simulators/Camera/target
+/Simulators/E_Board/target
+/Simulators/GateBar/target
+/Simulators/DeviceGlobal/target
+/Statistics/target
+/Vehicle/target
+#
