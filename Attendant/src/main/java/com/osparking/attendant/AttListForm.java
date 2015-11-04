@@ -1,21 +1,18 @@
 /* 
- * Attendant, Module--Part of OSParking Software 
- * Copyright (C) 2015 Open Source Parking Inc.
+ * Copyright (C) 2015 Open Source Parking Inc.(www.osparking.com)
  *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 3.0 of the License, or (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- * This library is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
- * MA 02110-1301  USA
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package com.osparking.attendant;
 
@@ -34,8 +31,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
+import org.apache.commons.validator.routines.EmailValidator;
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
@@ -56,13 +52,11 @@ import com.osparking.global.names.PasswordValidator;
 import static javax.swing.JOptionPane.showMessageDialog;
 import static com.osparking.global.names.DB_Access.*;
 import com.osparking.global.Globals;
-import com.osparking.global.names.ConvComboBoxItem;
 import com.osparking.global.names.DB_Access;
 import com.osparking.global.names.JDBCMySQL;
 import static com.osparking.global.names.JDBCMySQL.getHashedPW;
 import com.osparking.global.names.JTextFieldLimit;
 import com.osparking.global.names.OSP_enums.OpLogLevel;
-import com.osparking.global.names.PComboBox;
 import com.osparking.global.names.ParentGUI;
 import java.awt.event.ActionEvent;
 import java.awt.event.WindowAdapter;
@@ -75,7 +69,7 @@ import net.proteanit.sql.DbUtils;
 
 /**
  *
- * @author Park, Jongbum <Park, Jongbum at Open Source Parking Inc.>
+ * @author Open Source Parking Inc.
  */
 
 public class AttListForm extends javax.swing.JFrame {
@@ -149,7 +143,7 @@ public class AttListForm extends javax.swing.JFrame {
             }
         });           
         attachEnterHandler(searchText);
-
+        adminAuth2CheckBox.setSelected(isManager);
     }
     
     private void attachEnterHandler(JComponent compo) {
@@ -1623,18 +1617,23 @@ public class AttListForm extends javax.swing.JFrame {
     }//GEN-LAST:event_createButtonActionPerformed
 
     private boolean validateEmail(String email) {
-        boolean isValid = false;
-
-        try {
-            //Create InternetAddress object and validated the email address.
-            InternetAddress internetAddress = new InternetAddress(email);
-            internetAddress.validate();
-            isValid = true;
-        } catch (AddressException ex) {
-            //logParkingException(Level.SEVERE, ex, "(email: " + email + ")");
-        }
-        return isValid;
+        //Create InternetAddress object and validated the email address.
+        final EmailValidator emailValidator = EmailValidator.getInstance();
+        
+        return emailValidator.isValid(email);
+//        boolean isValid = false;
+//
+//        try {
+//            //Create InternetAddress object and validated the email address.
+//            InternetAddress internetAddress = new InternetAddress(email);
+//            internetAddress.validate();
+//            isValid = true;
+//        } catch (AddressException ex) {
+//            //logParkingException(Level.SEVERE, ex, "(email: " + email + ")");
+//        }
+//        return isValid;
     }    
+    
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         try {
             Object selectedObj = searchCriteriaComboBox.getSelectedItem();
@@ -2473,7 +2472,6 @@ public class AttListForm extends javax.swing.JFrame {
             String tableRowID = attModel.getValueAt(clickedRow, 0).toString();
             boolean isManager = (attModel.getValueAt(clickedRow, 2).toString().equals("Y") ? true : false);
         
-            adminAuth2CheckBox.setSelected(isManager);
             userIDText.setText(tableRowID);
             changeFieldAndButtonProperties(tableRowID, isManager);
         

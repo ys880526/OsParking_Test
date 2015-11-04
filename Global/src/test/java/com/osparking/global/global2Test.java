@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Park Jongbum <Park Jongbum at Open Source Parking Inc.>
+ * @author Open Source Parking Inc.
  */
 
 

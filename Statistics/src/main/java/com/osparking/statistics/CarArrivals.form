@@ -189,7 +189,7 @@
                         </Property>
                         <Property name="alignmentX" type="float" value="0.0"/>
                         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                          <Color id="&#xae30;&#xbcf8; &#xcee4;&#xc11c;"/>
+                          <Color id="Default Cursor"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[32767, 120]"/>
@@ -507,9 +507,9 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="affiliPanel" pref="145" max="32767" attributes="0"/>
+                                      <Component id="affiliPanel" max="32767" attributes="0"/>
                                       <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
-                                      <Component id="buildingPanel" pref="145" max="32767" attributes="0"/>
+                                      <Component id="buildingPanel" pref="125" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -526,6 +526,13 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f3" green="f3" red="f3" type="rgb"/>
                                 </Property>
+                                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[150, 69]"/>
+                                </Property>
+                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[150, 69]"/>
+                                </Property>
+                                <Property name="requestFocusEnabled" type="boolean" value="false"/>
                               </Properties>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout">
@@ -553,8 +560,11 @@
                                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                       <Dimension value="[32767, 32767]"/>
                                     </Property>
+                                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                      <Dimension value="[100, 23]"/>
+                                    </Property>
                                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                                      <Dimension value="[180, 23]"/>
+                                      <Dimension value="[100, 23]"/>
                                     </Property>
                                   </Properties>
                                   <Events>
@@ -569,8 +579,11 @@
                                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                                       <Connection code="new javax.swing.DefaultComboBoxModel(new String[]{})" type="code"/>
                                     </Property>
+                                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                      <Dimension value="[100, 23]"/>
+                                    </Property>
                                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                                      <Dimension value="[180, 23]"/>
+                                      <Dimension value="[100, 23]"/>
                                     </Property>
                                   </Properties>
                                   <Events>
@@ -589,6 +602,9 @@
                                     </Property>
                                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                                       <Connection code="    new javax.swing.DefaultComboBoxModel(new String[]{})" type="code"/>
+                                    </Property>
+                                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                      <Dimension value="[100, 23]"/>
                                     </Property>
                                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                       <Dimension value="[100, 23]"/>
@@ -635,8 +651,11 @@
                                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                       <Dimension value="[32767, 32767]"/>
                                     </Property>
+                                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                      <Dimension value="[80, 21]"/>
+                                    </Property>
                                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                                      <Dimension value="[100, 23]"/>
+                                      <Dimension value="[80, 23]"/>
                                     </Property>
                                   </Properties>
                                   <Events>
@@ -652,10 +671,10 @@
                                       <Connection code="&#xa;    new javax.swing.DefaultComboBoxModel(new String[]{})" type="code"/>
                                     </Property>
                                     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                                      <Dimension value="[71, 23]"/>
+                                      <Dimension value="[80, 21]"/>
                                     </Property>
                                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                                      <Dimension value="[150, 23]"/>
+                                      <Dimension value="[80, 23]"/>
                                     </Property>
                                   </Properties>
                                   <Events>
@@ -675,10 +694,10 @@
                                       <Connection code="&#xa;    new javax.swing.DefaultComboBoxModel(new String[]{})" type="code"/>
                                     </Property>
                                     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                                      <Dimension value="[71, 23]"/>
+                                      <Dimension value="[80, 21]"/>
                                     </Property>
                                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                                      <Dimension value="[100, 23]"/>
+                                      <Dimension value="[80, 23]"/>
                                     </Property>
                                   </Properties>
                                   <Events>

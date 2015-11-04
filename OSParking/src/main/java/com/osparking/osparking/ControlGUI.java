@@ -1,21 +1,18 @@
 /* 
- * OSParking, Parking Lot Management Software
- * Copyright (C) 2015 Open Source Parking Inc.
+ * Copyright (C) 2015 Open Source Parking Inc.(www.osparking.com)
  *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 3.0 of the License, or (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
- * MA 02110-1301  USA
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package com.osparking.osparking;
 
@@ -150,7 +147,6 @@ import java.io.UnsupportedEncodingException;
 import java.lang.management.ManagementFactory;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
-import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -165,7 +161,6 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.Box;
 import javax.swing.DefaultListModel;
@@ -185,7 +180,7 @@ import javax.swing.event.ListSelectionListener;
  * <p>Company Web Site : <a href="http://www.osparking.com">http://www.osparking.com</a></p>
  * <p>(Company logo: <img src ="doc-files/64px.png"/>)</p>
  * 
- * @author Park, Jongbum <Park, Jongbum at Open Source Parking Inc.>
+ * @author Open Source Parking Inc.
  */
 public class ControlGUI extends javax.swing.JFrame implements ActionListener, ManagerGUI, ParentGUI {
     
@@ -542,11 +537,16 @@ public class ControlGUI extends javax.swing.JFrame implements ActionListener, Ma
             MenuItems_setEnabled(false);
             LogInOutMenu.setText("<HTML>Log <U>I</U>n</HTML>");
             UserIDLabelMenu.setText(IDBeforeLogin);
+            IsManagerLabelMenu.setText("Manager : -  ");
         } else {
             MenuItems_setEnabled(true);
             
             LogInOutMenu.setText("<HTML>Log <U>O</U>ut</HTML>");
             UserIDLabelMenu.setText("ID: " + Globals.loginID);
+            if(isManager)
+                IsManagerLabelMenu.setText("Manager : O  ");
+            else
+                IsManagerLabelMenu.setText("Manager : X  ");
             AttendantTask_setEnabled(true);
         }
     }    
@@ -650,6 +650,7 @@ public class ControlGUI extends javax.swing.JFrame implements ActionListener, Ma
         LogInOutMenu = new javax.swing.JMenu();
         LoginUser = new javax.swing.JMenuItem();
         LogoutUser = new javax.swing.JMenuItem();
+        IsManagerLabelMenu = new javax.swing.JMenu();
         UserIDLabelMenu = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -1328,8 +1329,14 @@ public class ControlGUI extends javax.swing.JFrame implements ActionListener, Ma
 
         visibleMenuBar.add(LogInOutMenu);
 
+        IsManagerLabelMenu.setText("Manager : -  ");
+        IsManagerLabelMenu.setFont(new java.awt.Font(font_Type, font_Style, font_Size));
+        IsManagerLabelMenu.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        visibleMenuBar.add(IsManagerLabelMenu);
+
         UserIDLabelMenu.setBackground(MainBackground);
         UserIDLabelMenu.setText(IDBeforeLogin);
+        UserIDLabelMenu.setToolTipText("");
         UserIDLabelMenu.setAlignmentX(0.0F);
         UserIDLabelMenu.setFocusPainted(true);
         UserIDLabelMenu.setFont(new java.awt.Font(font_Type, font_Style, font_Size));
@@ -1694,6 +1701,7 @@ public class ControlGUI extends javax.swing.JFrame implements ActionListener, Ma
     private javax.swing.JMenu CommandMenu;
     private javax.swing.JMenuItem DriverListItem;
     private javax.swing.JMenuItem EntryRecordItem;
+    private javax.swing.JMenu IsManagerLabelMenu;
     private javax.swing.JLabel LeftSide_Label;
     private javax.swing.JMenu LogInOutMenu;
     private javax.swing.JMenuItem LoginRecordItem;

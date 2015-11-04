@@ -1,32 +1,33 @@
 # Release
-OsParking, 3 device simulators, etc.-needs parkinglot-db(another repository of OsParking)
+OsParking, 3 device simulators, etc.-needs parkinglot-db(another repository of OsParking in Github)
 
 OsParking (pronounced 'Oz' Parking, as in The Wizard of Oz) is an Open Source Parking Lot Management Software. In an extended sense, it is a term which describes a simulation package which includes OsParking(manager) and three device simulators(Camera, E-Board, GateBar).
 
-It is going to be officially public as of Oct 30, 2015, Seoul, South Korea time)
-OsParking software assumes the use of LPR (License Plate Recognition) technologyas a external module to identify car tag number.
+OsParking software assumes the use of LPR (License Plate Recognition) function a external module to identify car tag numbers.
 
-Open source Parking Inc
+Open source Parking Inc.
 
 Oct. 30, 2015
 
+Company homepage(www.osparking.com) will open early November.
+
 -
 
-Softwares Needed to Run
+Softwares Needed to Run OsParking
 
-1. JRE 1.8.0
+1. JRE 1.8.0 or later
 
-2. MySQL 5.6.24
+2. MySQL 5.6.24 or later
 
-Additionally Needed Softwares for Developers
+Additionally Needed Softwares for the Developers
 
-1. IDE used: netbeans 8.0.2
+1. IDE used: netbeans 8.0.2 or later
 
-2. IDE augmenting Maven : apache-maven-3.3.3
+2. IDE augmenting Maven : apache-maven-3.3.3 or later
 
-3. Java Compiler: JDK 1.8.0_45
+3. Java Compiler: JDK 1.8.0_45 or later
 
-4. (Optionally) Toad for MySQL 7.5.0
+4. (Optionally) Toad for MySQL 7.5.0 or later
 
 -
 

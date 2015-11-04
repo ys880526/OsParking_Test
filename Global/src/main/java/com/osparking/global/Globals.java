@@ -1,21 +1,18 @@
 /* 
- * Global, Library--Part of OSParking Software 
- * Copyright (C) 2015 Open Source Parking Inc.
+ * Copyright (C) 2015 Open Source Parking Inc.(www.osparking.com)
  *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 3.0 of the License, or (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- * This library is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
- * MA 02110-1301  USA
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package com.osparking.global;
 
@@ -97,7 +94,7 @@ import javax.imageio.ImageIO;
  * Defines names and methods used globally in the Parking Lot manager application developed by 
  * Open Source Parking Inc. <p>(Company logo: <img src ="doc-files/64px.png"/>)</p>
  * 
- * @author Park, Jongbum <Park, Jongbum at Open Source Parking Inc.>
+ * @author Open Source Parking Inc.
  * @version "%I%,%G%"
  */
 public class Globals {
@@ -174,13 +171,13 @@ public class Globals {
         return osParkingIcon;
     }
      
-    public static ImageIcon LGPL30_Icon = null; 
+    public static ImageIcon GPL30_Icon = null; 
     static {
-        LGPL30_Icon = new javax.swing.ImageIcon(new Globals().getClass().getResource("/lgplv3-147x51.png"));        
+        GPL30_Icon = new javax.swing.ImageIcon(new Globals().getClass().getResource("/gplv3-127x51.png"));        
     }
     
     public static ImageIcon getLGPN30_Icon() {
-        return LGPL30_Icon;
+        return GPL30_Icon;
     }
     
     public static ImageIcon quest20_Icon = null; 

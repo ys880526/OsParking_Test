@@ -14,24 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.osparking.global.names;
-
-import java.io.File;
+package com.osparking.osparking;
 
 /**
  *
- * @author Open Source Parking Inc.
+ * @author Open Source Parking Inc
  */
-public class OdsFileOnly extends javax.swing.filechooser.FileFilter {
-    @Override
-    public boolean accept(File file) {
-        // Allow only directories, or files with ".txt" extension
-        return file.isDirectory() || file.getAbsolutePath().endsWith(".ods");
-    }
-    @Override
-    public String getDescription() {
-        // This description will be displayed in the dialog,
-        // hard-coded = ugly, should be done via I18N
-        return "ods documents (*.ods)";
-    }
-}   
+public class NewClass {
+    
+}

@@ -1,10 +1,19 @@
-Help Project--part of OSParking (Parking Lot Management Software) Simulator Package
+JCalendar Project
 
-Copyright holder Contact Information
+/* 
+ * Whole JCalendar Project Original Writer
+ *
+ *  Copyright (C) 2006 Kai Toedter
+ *  kai@toedter.com
+ *  www.toedter.com
+ */
 
-Dr. Park Jongbum (CEO)
-Open Source Parking, Inc.
-
-Phone: 82-2-858-9168
-E-mail: jbpark03@gmail.com
-Address: Room812, 3 Gongwon-ro, Guro-gu, Seoul 08298, S.Korea
+/*
+ * Modified partly and became part of OSParking (Parking Lot Management Software) Simulator Package
+ * 
+ * Modified by: Open Source Parking, Inc.
+ * 
+ * Phone: 82-2-858-9168
+ * E-mail: jbpark03@gmail.com
+ * Address: Room812, 3 Gongwon-ro, Guro-gu, Seoul 08298, S.Korea
+ */
